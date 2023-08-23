@@ -21,7 +21,7 @@ Before you begin, ensure you have met the following requirements:
 2. **Navigate to the project directory**:
 
     ```bash
-    cd [Project_Directory_Name]
+    cd cafe-app-ui
     ```
 
 3. **Install project dependencies**:
@@ -34,7 +34,10 @@ Before you begin, ensure you have met the following requirements:
 
 After setting up everything, follow these steps to run the project:
 
-1. **Start the development server**:
+1. **Create .env file within project folder**
+   Key in the .env file key-value pairs shared by project owner
+
+2. **Start the development server**:
 
     ```bash
     npm start
