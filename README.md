@@ -34,7 +34,7 @@ Before you begin, ensure you have met the following requirements:
 
 After setting up everything, follow these steps to run the project:
 
-1. **Create .env file within project folder**
+1. **Create .env file within project folder**:
    Key in the .env file key-value pairs shared by project owner
 
 2. **Start the development server**:
