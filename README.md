@@ -37,10 +37,10 @@ After setting up everything, follow these steps to run the project:
 1. **Create .env file within project folder**:
    Key in the .env file key-value pairs shared by project owner
 
-2. **Start the development server**:
+2. **Start the development server** (Note: we are starting the frontend on port 3001 because the backend is expected to run on port 3000):
 
     ```bash
-    npm start
+    PORT=3001 npm start
     ```
 
 After executing the command, the React development server will start, and the application should open in a new browser window. If it doesn't, manually navigate to `http://localhost:3000` in your browser.
