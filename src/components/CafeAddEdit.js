@@ -41,7 +41,6 @@ const CafeAddEdit = () => {
   }
 
   const onSubmit = (data) => {
-    console.log(data)
     const logoUrl = uploadImageAndGetUrl(data.logo)
     if (cafe) {
         const dataWithLogoAndId = {

@@ -34,7 +34,6 @@ const EmployeeAddEdit = (props) => {
   const [cafes, setCafes] = useState([]);
 
   useEffect(() => {
-    console.log(employee);
     if (employee) {
       setValue("name", employee.name);
       setValue("email_address", employee.email_address);
@@ -54,7 +53,6 @@ const EmployeeAddEdit = (props) => {
   }
 
   const onSubmit = async (data) => {
-    console.log(data);
     if (employee) {
       const dataWithIdAndStartDate = {
         employee_id: employee.employee_id,
