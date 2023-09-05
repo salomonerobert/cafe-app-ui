@@ -39,10 +39,7 @@ const EmployeeAddEdit = (props) => {
       setValue("email_address", employee.email_address);
       setValue("phone_number", employee.phone_number);
       setValue("gender", employee.gender);
-      setValue(
-        "cafe",
-        cafes.filter((cafe) => cafe._id === employee.cafe)[0]?.name
-      );
+      setValue("cafe", getCafeName(employee));
     }
 
     fetchCafes();
@@ -50,6 +47,10 @@ const EmployeeAddEdit = (props) => {
 
   function fetchCafes() {
     axios.get(`${baseURL}/cafes`).then((res) => setCafes(res.data));
+  }
+
+  function getCafeName(employee) {
+    return cafes.filter((cafe) => cafe._id === employee.cafe)[0]?.name;
   }
 
   const onSubmit = async (data) => {
@@ -74,7 +75,7 @@ const EmployeeAddEdit = (props) => {
           }
         });
     } else {
-      let uuid = await employeeUUIDService.getUUID();
+      let uuid = await employeeUUIDService.getUUID(); //simplified UUID service to generate ID
       const dataWithIdAndStartDate = {
         employee_id: uuid,
         start_date: new Date(),
